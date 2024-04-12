@@ -35,7 +35,7 @@ jobs:
           echo "==================================="
           echo " Checking TestRigor retest"
           echo "==================================="
-          response=$(curl -i -o - -s -X GET 'https://api.testrigor.com/api/v1/apps/yufwtfu98Muit8iwb/status' -H 'auth-token: 668d75fc-304a-4b47-b782-bf0029af4a58' -H 'Accept: application/json')
+        response=$(curl -i -o - -s -X GET 'https://api.testrigor.com/api/v1/apps/yufwtfu98Muit8iwb/status' -H 'auth-token: 668d75fc-304a-4b47-b782-bf0029af4a58' -H 'Accept: application/json')
           code=$(echo "$response" | grep HTTP |  awk '{print $2}')
           body=$(echo "$response" | grep status)
           echo "Status code: " $code
